@@ -51,10 +51,7 @@ void MX_GPIO_Init(void)
   LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOA);
 
   /**/
-  LL_GPIO_SetOutputPin(LED_0_DS0_RED_GPIO_Port, LED_0_DS0_RED_Pin);
-
-  /**/
-  LL_GPIO_ResetOutputPin(LED_1_DS1_GREEN_GPIO_Port, LED_1_DS1_GREEN_Pin);
+  LL_GPIO_SetOutputPin(GPIOF, LED_0_DS0_RED_Pin|LED_1_DS1_GREEN_Pin);
 
   /**/
   GPIO_InitStruct.Pin = LED_0_DS0_RED_Pin|LED_1_DS1_GREEN_Pin;

@@ -102,21 +102,14 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-        //如果KEY_UP按键按下
+        //如果KEY_UP按键按下，则LED0和LED1亮
         if (LL_GPIO_IsInputPinSet(GPIOA, LL_GPIO_PIN_0)) {
-            //若持续按住KEY_UP，则LED0和LED1闪烁
-            while(LL_GPIO_IsInputPinSet(GPIOA, LL_GPIO_PIN_0)){
-                LL_GPIO_SetOutputPin(GPIOF, LL_GPIO_PIN_9);
-                LL_GPIO_SetOutputPin(GPIOF, LL_GPIO_PIN_10);
-                LL_mDelay(500); //延时500ms
+            while (LL_GPIO_IsInputPinSet(GPIOA, LL_GPIO_PIN_0))
                 LL_GPIO_ResetOutputPin(GPIOF, LL_GPIO_PIN_9);
-                LL_GPIO_ResetOutputPin(GPIOF, LL_GPIO_PIN_10);
                 LL_mDelay(500); //延时500ms
-            }
-            //否则LED0和LED1灭
-        } else {
+        }
+        else {
             LL_GPIO_SetOutputPin(GPIOF, LL_GPIO_PIN_9);
-            LL_GPIO_SetOutputPin(GPIOF, LL_GPIO_PIN_10);
         }
 
 
