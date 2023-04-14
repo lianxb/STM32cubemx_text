@@ -101,6 +101,13 @@ int main(void) {
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
+        LL_GPIO_SetOutputPin(GPIOF, LL_GPIO_PIN_9);
+        LL_GPIO_SetOutputPin(GPIOF, LL_GPIO_PIN_10);
+        LL_mDelay(500); // 添加500毫秒的延时
+        // 如果未按下，打开LED0 (PF9)
+        LL_GPIO_ResetOutputPin(GPIOF, LL_GPIO_PIN_9);
+        LL_GPIO_ResetOutputPin(GPIOF, LL_GPIO_PIN_10);
+        LL_mDelay(500); // 添加500毫秒的延时
     }
     /* USER CODE END 3 */
 }
