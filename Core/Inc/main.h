@@ -70,10 +70,10 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED_0_DS0_RED_Pin LL_GPIO_PIN_9
-#define LED_0_DS0_RED_GPIO_Port GPIOF
-#define LED_1_DS1_GREEN_Pin LL_GPIO_PIN_10
-#define LED_1_DS1_GREEN_GPIO_Port GPIOF
+#define LED0_Pin LL_GPIO_PIN_9
+#define LED0_GPIO_Port GPIOF
+#define LED1_Pin LL_GPIO_PIN_10
+#define LED1_GPIO_Port GPIOF
 #define KEY_UP_Pin LL_GPIO_PIN_0
 #define KEY_UP_GPIO_Port GPIOA
 #ifndef NVIC_PRIORITYGROUP_0
